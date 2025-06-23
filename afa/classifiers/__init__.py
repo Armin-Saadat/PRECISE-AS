@@ -1,0 +1,3 @@
+from afa.classifiers.proto_as_net import ProtoASNetClassifier
+from afa.classifiers.proto_as_sim_former import ProtoASSimFormer
+from afa.classifiers.proto_as_sim_max import ProtoASSimMax

@@ -1,0 +1,44 @@
+# wandb
+use_wandb: False
+wandb_project_name: AFA
+wandb_mode: online # online / offline / disabled
+
+n_epochs: 50
+device: 'cpu' # 'cuda' or 'cpu'
+log_profile: False
+
+agent:
+  agent_name: 'AS-Tom-DDQN'
+  agent_checkpoint_dir: 'logs/temp_run/' # e.g: 'logs/run-temp/'. Empty to start a new agent.
+  load_mode: 'latest' # 'latest', 'best', indicates which checkpoint to load.
+  lr: 0.001
+  discount_factor: 1.0
+
+  # DDQN
+  eps_start: 1.0
+  eps_final: 0.01
+  eps_decay: 10000
+  TAU: 1.0  #  how much to change the Q-network or Q-Table
+  target_update_freq: 10000  # number of steps
+  memory_size: 50000  # 1000000 for UCI, 50000 for AS-Tom | number of steps
+  memory_bs: 128
+
+  # scheduler for RL
+  milestones: [15, 30]
+  gamma: 0.1
+
+environment:
+  env_name: 'AS-Tom-Sim'
+  env_render: False
+  lammy: 0.01  # weight of cost -> env.get_reward function
+  max_step: 5
+  n_actions: 5
+
+classifier:
+  classifier_name: 'proto_as_sim_former' # 'proto_as_sim_former' or 'proto_as_sim_max'
+  classifier_path: 'afa/classifiers/checkpoints/proto_as_sim_former.pth'
+  # 'afa/classifiers/checkpoints/' + 'proto_as_sim_former.pth' or 'proto_as_net.pth'
+
+data:
+  dataset_name: 'AS-Tom-Sim'
+  dataset_path: 'data/ASTom/processed'
