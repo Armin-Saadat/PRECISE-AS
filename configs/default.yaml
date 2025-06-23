@@ -9,7 +9,7 @@ log_profile: False
 
 agent:
   agent_name: 'AS-Tom-DDQN'
-  agent_checkpoint_dir: 'logs/temp_run/' # e.g: 'logs/run-temp/'. Empty to start a new agent.
+  agent_checkpoint_dir: # e.g: 'logs/run-temp/'. Empty to start a new agent.
   load_mode: 'latest' # 'latest', 'best', indicates which checkpoint to load.
   lr: 0.001
   discount_factor: 1.0
