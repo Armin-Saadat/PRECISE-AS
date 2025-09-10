@@ -1,4 +1,4 @@
-# Active Feature Acquisition
+# PRECISE-AS: Personalized Reinforcement Learning for Efficient Point-of-Care Echocardiography in Aortic Stenosis Diagnosis
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
