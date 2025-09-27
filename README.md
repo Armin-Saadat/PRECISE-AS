@@ -9,17 +9,14 @@
 <p align="center">
 <a href="https://arxiv.org/abs/2509.02898" alt="arXiv">
     <img src="https://img.shields.io/badge/arXiv-2503.15784-b31b1b.svg?style=flat" /></a>
+    [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 </p>
 
 <img width="1037" height="506" alt="Screenshot 2025-09-27 at 11 35 23 AM" src="https://github.com/user-attachments/assets/9cee0020-668b-4c95-90ab-38551f4792b6" />
 
 
-
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-
-
 ## Installation
-To install and run this project locally, follow these steps:
+To install and run this project locally, please follow these steps:
 
 conda >= 23.11.0
 
